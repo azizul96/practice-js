@@ -21,24 +21,23 @@ console.log(myNumber);
 /*
 ফাংশন নেম দিতে হবে isJavaScriptFile । এই ফাংশনে প্যারামিটার হিসেবে নিবে একটি স্ট্রিং(String) যেটি হবে একটি ফাইল নেম (যেমনঃ ‘index.js’)। যদি এটি জাভাস্ক্রিপ্ট ফাইল হয় তোমাকে true রিটার্ন করতে হবে আর যদি না হয় তাহলে false রিটার্ন করতে হবে 
 
-
-function isJavaScriptFile(fileName){
-    if(typeof fileName !== "string"){
-        return "please provide me a valid number"
+function isJavaScriptFile(string){
+    if(typeof string !== "string"){
+        return "Please provide string type value";
+    }
+    else if(string.endsWith(".js") === true){
+        return true;
     }
     else{
-        if(fileName.endsWith(".js") === true){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return false;
     }
 
 }
-console.log(isJavaScriptFile("hello.js"))
-*/
-/*
+const fileName = isJavaScriptFile("script.html");
+console.log(fileName);
+
+2nd type ------------------------------
+
 function isJavaScriptFile(fileName){
     if(typeof fileName !== "string"){
         return "please provide me a valid number"
@@ -55,7 +54,6 @@ function isJavaScriptFile(fileName){
     }
 
 }
-
 console.log(isJavaScriptFile("hello.js"));
 */
 
@@ -70,7 +68,21 @@ Sample Input & Output
 Input: 5
 Output: 7.5
 
+
+function mindGame(positiveNumber){
+    if(typeof positiveNumber !== "number" || positiveNumber <= 0){
+        return "Please provide a positive number greater than 0"
+    }
+    else{
+        let result = (positiveNumber*3+10)/2 -5;
+        return result;
+    }
+    
+}
+const inputNumber = mindGame(5)
+console.log(inputNumber);
 */
+
 
 // Problem-4-------------------
 /*
@@ -82,5 +94,26 @@ Input: -15
 Output: -22
 Input: 15
 Output: 30
-
 */
+
+function isLGSeven(number){
+    if(typeof number !== "number"){
+        return "Please provide a number";
+    }
+    else{
+        const myNumber = number - 7;
+        if(myNumber< 7){
+            return myNumber;
+        }
+        else{
+            let myNumber2 = number*2;
+            return myNumber2;
+        }
+    }
+}
+const inputNumber = isLGSeven(15)
+console.log(inputNumber);
+
+
+
+// Problem-5-------------------
