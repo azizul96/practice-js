@@ -179,7 +179,7 @@ Output: 6970
 Input: 100, 5, 1
 Output: 303
 
-*/
+
 function gemsToDiamond(num1, num2, num3){
     if(typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number"){
         return "Please provide me a number"
@@ -204,7 +204,7 @@ function gemsToDiamond(num1, num2, num3){
 }
 const inputGems = gemsToDiamond(100, 5, 1);
 console.log(inputGems);
-
+*/
 
 
 
@@ -220,6 +220,29 @@ const obj = {
 }
 Amar nam mehedy, amar boyos 26, amar email abc@gmail.com, amar bou nai. 
 */
+const myDetails = {
+    name: "Alif",
+    age:25,
+    email:"alifalamin@gmail.com"
+}
+
+function printDetails(person){
+    if(typeof person !== "object"){
+        return "Please provide me an object"
+    }
+    else{
+        const myName = person.name || "Nai";
+        const myage = person.age || "Nai";
+        const myEmail = person.email || "Nai";
+        const myBou = person.bou || "Nai";
+        
+        const sentence = "Amar nam " +myName + ", amar boyos " +myage +", amar email "+myEmail +", amar bou "+myBou;
+
+        return sentence;
+
+    }
+}
+console.log(printDetails(myDetails));
 
 
 
