@@ -219,7 +219,7 @@ const obj = {
     email:"abc@gmail.com"
 }
 Amar nam mehedy, amar boyos 26, amar email abc@gmail.com, amar bou nai. 
-*/
+
 const myDetails = {
     name: "Alif",
     age:25,
@@ -243,7 +243,7 @@ function printDetails(person){
     }
 }
 console.log(printDetails(myDetails));
-
+*/
 
 
 
@@ -253,17 +253,43 @@ Problem 1:
 আপনার কাছে একটি জাভাস্ক্রিপ্ট ফাংশন রয়েছে যার নাম হলো isValidPhotoName(photoName, imageExtensions)। এই ফাংশনটি দুটি প্যারামিটার গ্রহণ করে: photoName, যা একটি ছবির নাম প্রদর্শন করে, এবং imageExtensions Array, যা .jpg, .png, ইত্যাদি ছবির এক্সটেনশন গুলি ধারণ করে।
 আপনার কাজ হলো isValidPhotoName ফাংশনটি সম্পূর্ণ করা যাতে এই ফাংশনের মাধ্যমে পরীক্ষা করা যায় আপনি দেওয়া প্যারামিটার photoName সঠিক ছবির নাম কিনা তা। এই ফাংশনের কাজ হলো true রিটার্ন করা যদি photoName একটি বৈধ ছবির নামের শেষে বিদ্যমান ছবির এক্সটেনশন গুলির মধ্যে যেকোনটি শেষ হয়; অন্যথায়, ফাংশনটি false রিটার্ন করবে।
 
+function isValidPhotoName(photoName, imageExtensions){
+    if(typeof photoName !== "string" || !Array.isArray(imageExtensions)){
+        return "Your enter a valid photo name"
+    }
+    else{
+        for (let item of imageExtensions) {
+            if(photoName.toLowerCase().endsWith(item.toLowerCase())){
+                return true
+            }
+        }
+        return false
+    }
+
+
+}
+const image = "image.svg";
+const Extensions =[".jpeg",".png", ".gif", ".ico", ".jpg"]
+console.log(isValidPhotoName(image, Extensions));
 */
-
-
 
 
 
 // Problem-9-------------------
 /* function name sumOfN(). you will be provided a number n. you have to calculate the total of all numbers between 1 to n . use function recursion
+
+function sumOfN(n){
+    if(n===1){
+        return 1
+    }
+    else{
+        return n+sumOfN(n-1);
+    }
+
+}
+const number = sumOfN(5);
+console.log(number);
 */
-
-
 
 
 
